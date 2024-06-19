@@ -4,11 +4,12 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
-  { path: 'encomienda', loadChildren: () => import('./encomienda/encomienda.module').then(m => m.EncomiendaModule) },
-  { path: 'cliente', loadChildren: () => import('./cliente/cliente.module').then(m => m.ClienteModule) },
-  { path: 'repartidor', loadChildren: () => import('./repartidor/repartidor.module').then(m => m.RepartidorModule) },
-  { path: 'paquete', loadChildren: () => import('./paquete/paquete.module').then(m => m.PaqueteModule) },
-  { path: 'sobre', loadChildren: () => import('./sobre/sobre.module').then(m => m.SobreModule) }];
+  { path: 'calendario', loadChildren: () => import('./calendario/calendario.module').then(m => m.CalendarioModule) },
+  { path: 'cotizador', loadChildren: () => import('./cotizador/cotizador.module').then(m => m.CotizadorModule) },
+  { path: 'entregas', loadChildren: () => import('./entregas/entregas.module').then(m => m.EntregasModule) },
+  { path: 'nosotros', loadChildren: () => import('./nosotros/nosotros.module').then(m => m.NosotrosModule) },
+  { path: 'cuenta', loadChildren: () => import('./cuenta/cuenta.module').then(m => m.CuentaModule) },
+  { path: 'seguimiento', loadChildren: () => import('./seguimiento/seguimiento.module').then(m => m.SeguimientoModule) }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
